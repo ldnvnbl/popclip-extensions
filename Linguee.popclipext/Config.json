@@ -1,0 +1,15 @@
+{
+  "name": "Linguee",
+  "identifier": "com.humid.popclip.linguee",
+  "description": "Search selected text on Linguee English-Chinese dictionary",
+  "icon": "icon.svg",
+  "popclipVersion": 4151,
+  "actions": [
+    {
+      "title": "Linguee",
+      "icon": "icon.svg",
+      "requirements": ["text"],
+      "url": "https://www.linguee.com/english-chinese/search?query={popclip text}"
+    }
+  ]
+}

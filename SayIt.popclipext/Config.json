@@ -1,0 +1,67 @@
+{
+  "name": "Say it.",
+  "identifier": "com.humid.popclip.sayit",
+  "description": "Say the selected text aloud using ByteDance TTS API",
+  "icon": "symbol:speaker.wave.2.fill",
+  "popclipVersion": 4151,
+  "options": [
+    {
+      "identifier": "api_key",
+      "label": "API Key",
+      "type": "string",
+      "description": "ByteDance TTS API Key"
+    },
+    {
+      "identifier": "speaker",
+      "label": "Speaker",
+      "type": "multiple",
+      "defaultValue": "zh_female_xiaohe_uranus_bigtts",
+      "description": "Voice speaker",
+      "values": [
+        "zh_female_xueayi_saturn_bigtts",
+        "zh_female_vv_uranus_bigtts",
+        "zh_male_dayi_saturn_bigtts",
+        "zh_female_mizai_saturn_bigtts",
+        "zh_female_jitangnv_saturn_bigtts",
+        "zh_female_meilinvyou_saturn_bigtts",
+        "zh_female_santongyongns_saturn_bigtts",
+        "zh_male_ruyayichen_saturn_bigtts",
+        "zh_female_xiaohe_uranus_bigtts",
+        "zh_male_m191_uranus_bigtts",
+        "zh_male_taocheng_uranus_bigtts",
+        "saturn_zh_female_keainvsheng_tob",
+        "saturn_zh_female_tiaopigongzhu_tob",
+        "saturn_zh_male_shuanglangshaonian_tob",
+        "saturn_zh_male_tiancaitongzhuo_tob",
+        "saturn_zh_female_cancan_tob"
+      ],
+      "valueLabels": [
+        "儿童绘本",
+        "vivi",
+        "大壹",
+        "黑猫侦探社咪仔",
+        "鸡汤女",
+        "魅力女友",
+        "流畅女声",
+        "儒雅逸辰",
+        "小何",
+        "云舟",
+        "小天",
+        "可爱女生",
+        "调皮公主",
+        "爽朗少年",
+        "天才同桌",
+        "知性灿灿"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "title": "Say it.",
+      "icon": "symbol:speaker.wave.2.fill",
+      "requirements": ["text"],
+      "shell script file": "say.py",
+      "interpreter": "/usr/bin/python3"
+    }
+  ]
+}
