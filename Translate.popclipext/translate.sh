@@ -9,16 +9,13 @@ TEXT="$POPCLIP_TEXT"
 PAYLOAD=$(python3 -c "
 import json, sys
 text = sys.stdin.read()
+prompt = 'You are a translator. If the input is in English, translate it to Simplified Chinese. If the input is in Chinese, translate it to English. If the input is in another language, translate it to Simplified Chinese. Only output the translation, nothing else.\n\n<text>\n' + text.strip() + '\n</text>'
 print(json.dumps({
     'model': '$MODEL',
     'messages': [
         {
-            'role': 'system',
-            'content': 'You are a translator. If the input is in English, translate it to Simplified Chinese. If the input is in Chinese, translate it to English. If the input is in another language, translate it to Simplified Chinese. Only output the translation, nothing else.'
-        },
-        {
             'role': 'user',
-            'content': text
+            'content': prompt
         }
     ],
     'thinking': {'type': 'disabled'}
