@@ -20,7 +20,8 @@ print(json.dumps({
             'role': 'user',
             'content': text
         }
-    ]
+    ],
+    'thinking': {'type': 'disabled'}
 }))
 " <<< "$TEXT")
 
