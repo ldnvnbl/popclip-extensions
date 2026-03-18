@@ -1,0 +1,36 @@
+{
+  "name": "Translate",
+  "identifier": "com.humid.popclip.translate",
+  "description": "Translate selected text using OpenAI-compatible API",
+  "icon": "symbol:character.book.closed.fill",
+  "popclipVersion": 4151,
+  "options": [
+    {
+      "identifier": "base_url",
+      "label": "API Base URL",
+      "type": "string",
+      "description": "OpenAI-compatible API base URL (e.g. https://api.openai.com/v1)"
+    },
+    {
+      "identifier": "api_key",
+      "label": "API Key",
+      "type": "string",
+      "description": "API Key"
+    },
+    {
+      "identifier": "model",
+      "label": "Model",
+      "type": "string",
+      "defaultValue": "gpt-4o-mini",
+      "description": "Model name"
+    }
+  ],
+  "actions": [
+    {
+      "title": "Translate",
+      "icon": "symbol:character.book.closed.fill",
+      "requirements": ["text"],
+      "shell script file": "translate.sh"
+    }
+  ]
+}
